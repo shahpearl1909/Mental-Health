@@ -26,38 +26,114 @@ body {
 }
 
 
-/*Navigation bar*/
+/* Navigation bar */
 .navbar {
   background-color: #333;
-  position: fixed;  /* This makes it stay on top */
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 9999;  /* Ensures it's on top of other elements */
+  z-index: 9999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
 }
 
-.navbar ul {
+.navbar-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+
+/* Logo */
+.navbar .logo {
+  color: white;
+  font-size: 24px;
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+/* Hamburger Button (Three Lines) */
+.hamburger-menu {
+  display: none; /* Hidden by default on larger screens */
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 30px;
+  height: 25px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.hamburger-menu .line {
+  width: 30px;
+  height: 4px;
+  background-color: white;
+  border-radius: 2px;
+}
+
+/* Navigation Links */
+.navbar-links {
   list-style-type: none;
   margin: 0;
   padding: 0;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
 }
 
-.navbar li {
-  padding: 14px 20px;
+.navbar-links li {
+  padding: 10px 15px;
 }
 
-.navbar a {
+.navbar-links a {
   text-decoration: none;
   color: white;
-  font-size: 18px;
+  font-size: 16px;
 }
 
-.navbar a:hover {
+.navbar-links a:hover {
   background-color: #575757;
 }
 
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+  .navbar-links {
+    display: none; /* Hide navigation links on mobile by default */
+    width: 100%;
+    background-color: #333;
+  }
+
+  /* Show the hamburger menu on small screens */
+  .hamburger-menu {
+    display: flex;
+  }
+
+  /* Show navigation links when the "active" class is added */
+  .navbar-links.active {
+    display: block; /* Show links when active */
+    position: absolute;
+    top: 50px; /* Position links below the hamburger */
+    right: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar-links li {
+    width: 100%; /* Full width for each link */
+  }
+
+  .navbar-links li a {
+    display: block;
+    padding: 15px;
+  }
+}
 
 /* Create two unequal columns that floats next to each other */
 /* Left column */

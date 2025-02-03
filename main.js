@@ -1,3 +1,13 @@
+// Toggle the navigation menu when the hamburger button is clicked
+const hamburgerButton = document.querySelector('.hamburger-menu');
+const navbarLinks = document.querySelector('.navbar-links');
+
+// Event listener to toggle the 'active' class
+hamburgerButton.addEventListener('click', () => {
+  navbarLinks.classList.toggle('active');
+});
+
+
 // Mood Tracker Logic
 let moodHistory = [];
 
