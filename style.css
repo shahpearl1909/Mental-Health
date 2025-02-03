@@ -1,0 +1,236 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family:'Courier New', Courier, monospace;
+  padding: 10px;
+  background: #B4C8B0;
+}
+
+/* Header/Blog Title */
+.header {
+  padding: 30px;
+  text-align: center;
+  background: white;
+  height: 450px;
+  border-radius: 8px;
+  color: #B4C8B0;
+  border-style: double;
+  border-width: 20px;
+}
+
+.header h1{
+  padding-top: 50px;
+  font-size: 50px;
+}
+
+
+/*Navigation bar*/
+.navbar {
+  background-color: #333;
+  position: fixed;  /* This makes it stay on top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;  /* Ensures it's on top of other elements */
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar li {
+  padding: 14px 20px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+}
+
+.navbar a:hover {
+  background-color: #575757;
+}
+
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #D1D3D4;
+  width: 100%;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Add a card effect for articles */
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 8px;
+}
+
+/* Clear floats after the columns */
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.row{
+  text-align: center;
+  text-decoration: underline;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+    
+  }
+}
+
+#info{
+  height: 450px;
+  text-align: center;
+}
+
+ #info, #tracker, #survey {
+  padding: 20px;
+  margin: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-style: dotted;
+  border-color: #D1D3D4;
+  border-width: 5px;
+}
+
+/* Mood Tracker Section */
+#tracker{
+  padding:100px;
+  text-align-last: center;
+}
+
+#tracker input {
+  width: 60px;
+  padding: 5px;
+  margin-top: 10px;
+}
+
+#tracker button {
+  padding: 10px 20px;
+  background-color: #A8D5BA;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  color: black;
+}
+
+#tracker button:hover {
+  background-color: #45a049;
+  color: white;
+}
+
+#tracker #moodMessage {
+  margin-top: 10px;
+}
+
+#tracker #moodHistory {
+  margin-top: 20px;
+}
+
+#tracker #historyList {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+#tracker #historyList li {
+  margin-bottom: 10px;
+}
+
+/* Survey Section */
+#survey form {
+  margin-top: 20px;
+}
+
+#survey input {
+  width: 50px;
+  padding: 5px;
+  margin: 5px 0;
+}
+
+#survey button {
+  padding: 10px 20px;
+  background-color: #A8D5BA;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+#survey button:hover {
+  background-color: #45a049;
+  color: white;
+}
+
+#surveyResults {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+/*Images*/
+.image-container {
+  width: 100%; 
+  height: 400px; 
+  overflow: hidden; 
+}
+
+.image-container img {
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+}
+
+.image-container_ex {
+  width: 100%; 
+  height: 250px; 
+  overflow: hidden; 
+
+
+.image-container_ex img {
+  width: 100%; /
+  height: 100%; 
+  object-fit: cover; 
+}
